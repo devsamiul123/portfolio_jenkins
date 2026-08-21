@@ -39,6 +39,7 @@ pipeline {
                     docker run -d \
                         --name ${CONTAINER_NAME} \
                         --restart unless-stopped \
+                        --network jenkins \
                         -p ${HOST_PORT}:${CONTAINER_PORT} \
                         ${IMAGE_NAME}:latest
                 '''
@@ -49,7 +50,7 @@ pipeline {
             steps {
                 sh '''
                     sleep 3
-                    curl -f http://localhost:${HOST_PORT}
+                    curl -f http://${CONTAINER_NAME}:${CONTAINER_PORT}
                 '''
             }
         }
