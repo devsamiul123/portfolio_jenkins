@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chowdhury Muhammed Samiul | Portfolio</title>
+  <meta name="description" content="Portfolio of Chowdhury Muhammed Samiul — Software Engineer, AI Trainee, and Full-Stack Developer.">
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --surface: #ffffff;
+      --text: #17202a;
+      --muted: #667085;
+      --line: #e5e7eb;
+      --accent: #2563eb;
+      --accent-soft: #eff6ff;
+      --dark: #111827;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1050px, 92%); margin: auto; }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner {
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand { font-weight: 800; letter-spacing: -.02em; }
+    .nav-links { display: flex; gap: 24px; font-size: 14px; color: var(--muted); }
+    .nav-links a:hover { color: var(--accent); }
+    .hero {
+      padding: 85px 0 70px;
+      background: linear-gradient(180deg, #fff, var(--bg));
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.7fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+    .eyebrow {
+      display: inline-block;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(42px, 7vw, 72px);
+      line-height: .98;
+      letter-spacing: -.055em;
+    }
+    .hero h2 {
+      margin: 18px 0 14px;
+      font-size: 23px;
+      color: #344054;
+      font-weight: 600;
+    }
+    .hero p { max-width: 680px; color: var(--muted); font-size: 17px; }
+    .buttons { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
+    .btn {
+      display: inline-block;
+      padding: 11px 18px;
+      border-radius: 9px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .btn.primary { background: var(--dark); color: #fff; border-color: var(--dark); }
+    .btn:hover { transform: translateY(-1px); }
+    .profile-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 25px;
+      box-shadow: 0 12px 35px rgba(16,24,40,.06);
+    }
+    .profile-card strong { display: block; margin-bottom: 7px; }
+    .contact { color: var(--muted); font-size: 14px; }
+    section { padding: 65px 0; }
+    .section-title { margin-bottom: 28px; }
+    .section-title h2 { margin: 0 0 5px; font-size: 30px; letter-spacing: -.03em; }
+    .section-title p { margin: 0; color: var(--muted); }
+    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 22px;
+    }
+    .card h3 { margin: 0 0 4px; font-size: 19px; }
+    .meta { color: var(--accent); font-size: 13px; font-weight: 700; }
+    .card p { color: var(--muted); margin: 12px 0 0; font-size: 14px; }
+    .card ul { margin: 12px 0 0; padding-left: 18px; color: var(--muted); font-size: 14px; }
+    .skills { display: flex; flex-wrap: wrap; gap: 9px; }
+    .skill {
+      padding: 8px 12px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 650;
+    }
+    .timeline { display: grid; gap: 18px; }
+    .achievement {
+      border-left: 3px solid var(--accent);
+      padding: 2px 0 2px 18px;
+    }
+    .achievement h3 { margin: 0; font-size: 17px; }
+    .achievement p { margin: 3px 0 0; color: var(--muted); font-size: 14px; }
+    footer {
+      background: var(--dark);
+      color: #d1d5db;
+      padding: 30px 0;
+      text-align: center;
+      font-size: 13px;
+    }
+    @media (max-width: 760px) {
+      .hero-grid, .grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .hero { padding-top: 60px; }
+      section { padding: 48px 0; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <a class="brand" href="#">Samiul.</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#achievements">Achievements</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">Software Engineer • AI • Full-Stack</span>
+      <h1>Chowdhury<br>Muhammed Samiul</h1>
+      <h2>Backend / Full-Stack Developer & AI Practitioner</h2>
+      <p>
+        Detail-oriented Computer Science graduate with experience in Laravel, Vue.js,
+        RESTful APIs, Python, Machine Learning, Deep Learning, LLMs and Agentic AI.
+        Passionate about building efficient, secure and user-centric applications.
+      </p>
+      <div class="buttons">
+        <a class="btn primary" href="mailto:devsamiul123@gmail.com">Contact Me</a>
+        <a class="btn" href="tel:+8801920213568">+880 1920 213568</a>
+      </div>
+    </div>
+    <div class="profile-card">
+      <strong>Contact</strong>
+      <div class="contact">
+        Mirpur-14, Dhaka<br>
+        +8801920213568<br>
+        devsamiul123@gmail.com<br>
+        GitHub: devsamiul123
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>About</h2>
+        <p>Education and professional background.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <h3>Daffodil International University</h3>
+          <div class="meta">B.Sc. in Computer Science & Engineering · Jan 2022 – Jan 2026</div>
+          <p>CGPA: <strong>3.97</strong></p>
+        </article>
+        <article class="card">
+          <h3>BAF Shaheen College Dhaka</h3>
+          <div class="meta">HSC — Science · Jun 2018 – Jun 2020</div>
+          <p>GPA: <strong>5.00</strong></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="container">
+      <div class="section-title">
+        <h2>Experience</h2>
+        <p>Recent roles in AI, software development and research.</p>
+      </div>
+      <div class="timeline">
+        <article class="card">
+          <h3>AI Trainee — BJIT Limited</h3>
+          <div class="meta">Jul 2026 – Continue</div>
+          <ul>
+            <li>Hands-on work with Python, Machine Learning, Deep Learning, LLMs, Agentic AI and AI frameworks.</li>
+            <li>Foundation in mathematics, probability, statistics, algorithms and analytical problem-solving.</li>
+            <li>Exposure to software engineering best practices, technical communication and collaborative AI development.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>GenAI Intern — Metademy LLC</h3>
+          <div class="meta">Apr 2025 – Jun 2025</div>
+          <ul>
+            <li>Built a Selenium-based scraper for large-scale US music and YouTube datasets.</li>
+            <li>Developed RAG-based AI applications and an AI chatbot using Gemini LLM.</li>
+            <li>Created technical documentation and conducted product/service research.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Graduate Researcher — 4IR, Daffodil International University</h3>
+          <div class="meta">Jan 2024 – Oct 2024</div>
+          <ul>
+            <li>Implemented ML models involving CNN, ensemble models, feature selection/extraction and GANs.</li>
+            <li>Worked on patent idea development and AI research initiatives.</li>
+            <li>Participated in AI competitions and contributed ML-based solutions.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <div class="section-title">
+        <h2>Selected Projects</h2>
+        <p>Practical applications built across web, mobile and game development.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <h3>Basic Accounting Web Application</h3>
+          <div class="meta">Sep 2024 – Feb 2026 · Laravel / Vue.js</div>
+          <p>Full-stack accounting system for sales, expenses, payroll and suppliers, with automated revenue, profit and cash-flow calculations, invoice generation and an analytics dashboard.</p>
+        </article>
+        <article class="card">
+          <h3>Frenzy Ball Game</h3>
+          <div class="meta">Mar 2020 – Dec 2023 · C# / Unity</div>
+          <p>2D endless mobile game with color-matching mechanics, an in-game economy, virtual currency, skins and lives. Managed Google Play deployment, UI/UX and post-release updates.</p>
+        </article>
+        <article class="card">
+          <h3>College Official App</h3>
+          <div class="meta">Aug 2018 – Dec 2022 · Java / Android</div>
+          <p>Android application for academic results, announcements and institutional resources, featuring BeautifulSoup-based data retrieval and digital admission/recruitment forms.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <div class="section-title">
+        <h2>Skills</h2>
+        <p>Core technologies and technical areas.</p>
+      </div>
+      <div class="skills">
+        <span class="skill">Laravel</span><span class="skill">Vue.js</span><span class="skill">PHP</span>
+        <span class="skill">MySQL</span><span class="skill">Python</span><span class="skill">JavaScript</span>
+        <span class="skill">Java</span><span class="skill">Inertia.js</span><span class="skill">SQLite</span>
+        <span class="skill">Selenium</span><span class="skill">Postman</span><span class="skill">Git</span>
+        <span class="skill">GitHub</span><span class="skill">REST API</span><span class="skill">OOP</span>
+        <span class="skill">Machine Learning</span><span class="skill">Data Scraping</span><span class="skill">Relational Database</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="achievements">
+    <div class="container">
+      <div class="section-title">
+        <h2>Achievements</h2>
+        <p>Academic recognition and competitive programming highlights.</p>
+      </div>
+      <div class="timeline">
+        <div class="achievement">
+          <h3>Dean's List Award — Fall 2024</h3>
+          <p>Ranked in the top 0.5% among 25,000 students at Daffodil International University.</p>
+        </div>
+        <div class="achievement">
+          <h3>3rd Position in Batch</h3>
+          <p>3rd in the CSE department among 906 students over the full graduation period.</p>
+        </div>
+        <div class="achievement">
+          <h3>Unlock The Algorithm — Fall 2023</h3>
+          <p>4th place in the A Slot preliminary round; 40th rank in the final round.</p>
+        </div>
+        <div class="achievement">
+          <h3>Takeoff — Fall 2022</h3>
+          <p>4th place in the A Slot preliminary round; 152nd rank in the final round.</p>
+        </div>
+        <div class="achievement">
+          <h3>Crack Dataset — Spring 2024</h3>
+          <p>Advanced to the final round after ranking in the top 50 during the preliminary stage.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    © 2026 Chowdhury Muhammed Samiul · Built as a single-page portfolio
+  · <a href="mailto:devsamiul123@gmail.com">devsamiul123@gmail.com</a>
+  </div>
+</footer>
+
+</body>
+</html>
