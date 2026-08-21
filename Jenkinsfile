@@ -4,7 +4,7 @@ pipeline {
     environment {
         IMAGE_NAME = "samiul-portfolio"
         CONTAINER_NAME = "samiul-portfolio"
-        HOST_PORT = "8080"
+        HOST_PORT = "8081"
         CONTAINER_PORT = "80"
     }
 
